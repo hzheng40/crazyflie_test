@@ -9,8 +9,8 @@
 ###Drivers and patches:
 <br/>openni 1.5.x (including openni itself, NITE 1.5.x, Patch for primesense repo: [SensorKinect](https://github.com/avin2/SensorKinect))
 ###Repos:
-<br/>Modified openni_tracker repo: [mod_openni_tracker](https://github.gatech.edu/hzheng40/mod_openni_tracker)
-<br/>TF data processing repo: [tf_processing](https://github.gatech.edu/hzheng40/learning_tf)
+<br/>Modified openni_tracker repo: [mod_openni_tracker](https://github.com/hzheng40/mod_openni_tracker)
+<br/>TF data processing repo: [tf_processing](https://github.com/hzheng40/learning_tf)
 <br/>clone all the repos including this one and put them in your workspace
 ##To run the project:
 <br/>1. catkin_make
