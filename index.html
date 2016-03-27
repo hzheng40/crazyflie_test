@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Crazyflie test by hzheng40</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Crazyflie test</h1>
+        <p>Gesture controlled nano-quadcopter</p>
+
+        <p class="view"><a href="https://github.com/hzheng40/crazyflie_test">View the Project on GitHub <small>hzheng40/crazyflie_test</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/hzheng40/crazyflie_test/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/hzheng40/crazyflie_test/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/hzheng40/crazyflie_test">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="crazyflie_test" class="anchor" href="#crazyflie_test" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>crazyflie_test</h1>
+
+<h2>
+<a id="control-crazyflie-with-gesture" class="anchor" href="#control-crazyflie-with-gesture" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Control crazyflie with gesture</h2>
+
+<h2>
+<a id="requirements-for-only-hovering" class="anchor" href="#requirements-for-only-hovering" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Requirements for only hovering:</h2>
+
+<p><br><a href="https://www.github.com/whoenig/crazyflie_ros">crazyflie_ros</a>
+<br>And this repo </p>
+
+<h2>
+<a id="requirements-for-gesture-control" class="anchor" href="#requirements-for-gesture-control" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Requirements for gesture control:</h2>
+
+<p><br>All the requirements for only hovering</p>
+
+<h3>
+<a id="drivers-and-patches" class="anchor" href="#drivers-and-patches" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Drivers and patches:</h3>
+
+<p><br>openni 1.5.x (including openni itself, NITE 1.5.x, Patch for primesense repo: <a href="https://github.com/avin2/SensorKinect">SensorKinect</a>)</p>
+
+<h3>
+<a id="repos" class="anchor" href="#repos" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Repos:</h3>
+
+<p><br>Modified openni_tracker repo: <a href="https://github.com/hzheng40/mod_openni_tracker">mod_openni_tracker</a>
+<br>TF data processing repo: <a href="https://github.com/hzheng40/learning_tf">tf_processing</a>
+<br>clone all the repos including this one and put them in your workspace</p>
+
+<h2>
+<a id="to-run-the-project" class="anchor" href="#to-run-the-project" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>To run the project:</h2>
+
+<p><br>1. catkin_make
+<br>2. roslaunch openni_lauch openni_launch.launch
+<br>3. rosrun mod_openni_tracker mod_openni_tracker
+<br>4. rosrun learning_tf tf_test
+<br>5. roslaunch crazyflie_driver crazyflie_server.launch
+<br>6. roslaunch crazyflie_driver crazyflie_add.launch uri:=//0/80/250k (double check the uri for your crazyflie but it should be this one if you're only running one drone)</p>
+
+<h3>
+<a id="important-before-running-the-main-program-flying-the-drone-make-sure-a-user-is-in-frame-and-do-the-psi-pose-to-start-calibration-make-sure-the-tracker-started-tracking-and-tf_test-is-publishing-and-updating-data" class="anchor" href="#important-before-running-the-main-program-flying-the-drone-make-sure-a-user-is-in-frame-and-do-the-psi-pose-to-start-calibration-make-sure-the-tracker-started-tracking-and-tf_test-is-publishing-and-updating-data" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>IMPORTANT: Before running the main program flying the drone, make sure a user is in frame and do the psi pose to start calibration. Make sure the tracker started tracking and tf_test is publishing and updating data</h3>
+
+<p><br>7. rosrun crazyfie_test crazyflie_pressure (for pressure controlled thrust)
+<br>OR: rosrun crazyflie_test crazyflie_test (for constant thrust)</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/hzheng40">hzheng40</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
